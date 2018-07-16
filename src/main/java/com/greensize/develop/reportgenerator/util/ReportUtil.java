@@ -1,4 +1,4 @@
-package com.greensize.develop.reportGenerator.util;
+package com.greensize.develop.reportgenerator.util;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -11,7 +11,7 @@ import java.util.Iterator;
  * Created by greensize-backend on 13/7/2018.
  */
 public class ReportUtil {
-    private static final String FILE_NAME = "/tmp/reportExample1.xlsx";
+        private static final String FILE_NAME = "/tmp/reportExample1.xlsx";
 
     public static void main(String[] args) {
         ApachePOIExcelWrite();
