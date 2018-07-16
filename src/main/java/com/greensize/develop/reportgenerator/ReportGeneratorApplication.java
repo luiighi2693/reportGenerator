@@ -1,4 +1,4 @@
-package com.greensize.develop.reportGenerator;
+package com.greensize.develop.reportgenerator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

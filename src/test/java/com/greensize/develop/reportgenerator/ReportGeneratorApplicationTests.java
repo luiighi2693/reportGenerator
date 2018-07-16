@@ -1,4 +1,4 @@
-package com.greensize.develop.reportGenerator;
+package com.greensize.develop.reportgenerator;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
