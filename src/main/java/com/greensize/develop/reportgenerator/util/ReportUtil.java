@@ -5,7 +5,10 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 import java.io.*;
+import java.util.Collections;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Created by greensize-backend on 13/7/2018.
@@ -86,5 +89,35 @@ public class ReportUtil {
         }
 
         System.out.println("Excel generado");
+    }
+
+    public static XSSFWorkbook generateDefaultReport(LinkedHashMap<String, Object> data) {
+
+        LinkedHashMap<String, Object> header = SchemaUtil.getHeaderContext();
+        String labelSheet = SchemaUtil.getDefaultReportName();
+
+        XSSFWorkbook workbook = new XSSFWorkbook();
+        XSSFSheet sheet = workbook.createSheet(labelSheet);
+
+        //header
+        Row row = sheet.createRow(1);
+
+        header.forEach((key, value) -> {
+            Cell cell = row.createCell(new Integer(key) - 1);
+            cell.setCellValue((String) ((Map<String, Object>) value).get("value"));
+        });
+
+        return workbook;
+    }
+
+    public static void writeDefaultreport(LinkedHashMap<String, Object> data) {
+        XSSFWorkbook workbook = generateDefaultReport(data);
+        try {
+            FileOutputStream outputStream = new FileOutputStream(SchemaUtil.getReportExportPath() + SchemaUtil.getRandomReportName());
+            workbook.write(outputStream);
+            workbook.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
