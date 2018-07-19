@@ -1,8 +1,8 @@
 package com.greensize.develop.reportgenerator.entity;
 
-import com.greensize.develop.reportgenerator.util.Actividad;
-import com.greensize.develop.reportgenerator.util.Cliente;
-import com.greensize.develop.reportgenerator.util.TipoHorario;
+import com.greensize.develop.reportgenerator.util.Activity;
+import com.greensize.develop.reportgenerator.util.Client;
+import com.greensize.develop.reportgenerator.util.ScheduleType;
 
 import java.util.Date;
 
@@ -13,18 +13,18 @@ public class ReportRow {
 
     private Integer number;
     private String resource;
-    private Cliente client;
+    private Client client;
     private String project;
-    private Actividad activity;
+    private Activity activity;
     private Date dateBegin;
     private Date dateEnd;
     private Integer activeHours;
     private Date date;
     private String description;
-    private TipoHorario scheduleType;
+    private ScheduleType scheduleType;
 
-    public ReportRow(Integer number, String resource, Cliente client, String project, Actividad activity, Date dateBegin,
-                        Date dateEnd, Integer activeHours, Date date, String description, TipoHorario scheduleType) {
+    public ReportRow(Integer number, String resource, Client client, String project, Activity activity, Date dateBegin,
+                     Date dateEnd, Integer activeHours, Date date, String description, ScheduleType scheduleType) {
         this.number = number;
         this.resource = resource;
         this.client = client;
@@ -57,11 +57,11 @@ public class ReportRow {
         this.resource = resource;
     }
 
-    public Cliente getClient() {
+    public Client getClient() {
         return client;
     }
 
-    public void setClient(Cliente client) {
+    public void setClient(Client client) {
         this.client = client;
     }
 
@@ -73,11 +73,11 @@ public class ReportRow {
         this.project = project;
     }
 
-    public Actividad getActivity() {
+    public Activity getActivity() {
         return activity;
     }
 
-    public void setActivity(Actividad activity) {
+    public void setActivity(Activity activity) {
         this.activity = activity;
     }
 
@@ -121,11 +121,11 @@ public class ReportRow {
         this.description = description;
     }
 
-    public TipoHorario getScheduleType() {
+    public ScheduleType getScheduleType() {
         return scheduleType;
     }
 
-    public void setScheduleType(TipoHorario scheduleType) {
+    public void setScheduleType(ScheduleType scheduleType) {
         this.scheduleType = scheduleType;
     }
 }
