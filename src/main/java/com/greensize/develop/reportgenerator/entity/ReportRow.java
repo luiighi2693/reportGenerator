@@ -1,8 +1,8 @@
 package com.greensize.develop.reportgenerator.entity;
 
-import com.greensize.develop.reportgenerator.util.Activity;
-import com.greensize.develop.reportgenerator.util.Client;
-import com.greensize.develop.reportgenerator.util.ScheduleType;
+import com.greensize.develop.reportgenerator.util.enums.Activity;
+import com.greensize.develop.reportgenerator.util.enums.Client;
+import com.greensize.develop.reportgenerator.util.enums.ScheduleType;
 
 import java.util.Date;
 

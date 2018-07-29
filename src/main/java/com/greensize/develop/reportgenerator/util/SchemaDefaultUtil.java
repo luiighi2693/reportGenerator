@@ -3,17 +3,17 @@ package com.greensize.develop.reportgenerator.util;
 import java.util.Calendar;
 import java.util.LinkedHashMap;
 
-public class SchemaUtil {
+public class SchemaDefaultUtil {
     private static LinkedHashMap<String,Object> headerContext;
     private static String reportExportPath;
-    private static String defaultReportName;
+    private static String reportName;
 
     public static LinkedHashMap<String, Object> getHeaderContext() {
         return headerContext;
     }
 
     public static void setHeaderContext(LinkedHashMap<String, Object> headerContext) {
-        SchemaUtil.headerContext = headerContext;
+        SchemaDefaultUtil.headerContext = headerContext;
     }
 
     public static String getReportExportPath() {
@@ -21,15 +21,15 @@ public class SchemaUtil {
     }
 
     public static void setReportExportPath(String reportExportPath) {
-        SchemaUtil.reportExportPath = reportExportPath;
+        SchemaDefaultUtil.reportExportPath = reportExportPath;
     }
 
-    public static String getDefaultReportName() {
-        return defaultReportName;
+    public static String getReportName() {
+        return reportName;
     }
 
-    public static void setDefaultReportName(String defaultReportName) {
-        SchemaUtil.defaultReportName = defaultReportName;
+    public static void setReportName(String reportName) {
+        SchemaDefaultUtil.reportName = reportName;
     }
 
     public static String getRandomReportName() {
