@@ -22,9 +22,10 @@ public class ReportRow {
     private Date date;
     private String description;
     private ScheduleType scheduleType;
+    private String fortnightNumber;
 
     public ReportRow(Integer number, String resource, Client client, String project, Activity activity, Date dateBegin,
-                     Date dateEnd, Integer activeHours, Date date, String description, ScheduleType scheduleType) {
+                     Date dateEnd, Integer activeHours, Date date, String description, ScheduleType scheduleType, String fortnightNumber) {
         this.number = number;
         this.resource = resource;
         this.client = client;
@@ -36,6 +37,7 @@ public class ReportRow {
         this.date = date;
         this.description = description;
         this.scheduleType = scheduleType;
+        this.fortnightNumber = fortnightNumber;
     }
 
     public ReportRow() {
@@ -127,5 +129,13 @@ public class ReportRow {
 
     public void setScheduleType(ScheduleType scheduleType) {
         this.scheduleType = scheduleType;
+    }
+
+    public String getFortnightNumber() {
+        return fortnightNumber;
+    }
+
+    public void setFortnightNumber(String fortnightNumber) {
+        this.fortnightNumber = fortnightNumber;
     }
 }
